@@ -1,0 +1,77 @@
+---
+title: HaCS - Hackathon and Computing Society at BCU
+---
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style/css/home.css"/>
+    <link rel="shortcut icon" href="images/favicon.ico"/>
+    <!--TODO: Add viewport code-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!--TODO: MixItUp support-->
+    <title>{{ page.title }}</title>
+</head>
+
+<body>
+
+    <section id="committe">
+        <div class="container">
+            <div class="section-header">
+                <h1 role="section-heading">Hacktoberfest 2017</h1>
+                <h3>Get hacking!</h3>
+            </div>
+
+            <div class="committee-content">
+              {% for member in site.hackers %}
+                <div class="committe-item">
+                    <img src="{{member.image}}" alt="{{member.name}}"/>
+                    <h2>{{member.name}}</h2>
+                    <h4>{{member.message}}</h4>
+                    <hr/>
+                    <div class="committe-social">
+
+                      {% if member.facebook %}
+                        <a href="https://www.facebook.com/{{member.facebook}}" alt="Facebook"><div class="facebook"></div></a>
+                      {% endif %}
+
+                      {% if member.twitter %}
+                        <a href="https://twitter.com/{{member.twitter}}" alt="Twitter"><div class="twitter"></div></a>
+                      {% endif %}
+
+                      {% if member.github %}
+                        <a href="https://github.com/{{member.github}}" alt="GitHub"><div class="github"></div></a>
+                      {% endif %}
+
+                      {% if member.web %}
+                        <a href="http://{{member.web}}" alt="Website"><div class="web-outline"></div></a>
+                      {% endif %}
+
+                    </div>
+                </div>
+              {% endfor %}
+          </div>
+        </div>
+    </section>
+
+
+    <section class="join" id="join-large">
+        <div class="container">
+            <div class="join-content">
+                <img style="width:400px;"src="images/hacktoberfest.png" alt="Join Now"/>
+                <h1 role="section-heading">Get Contributing!</h1>
+                <h4></h4>
+                <a href="https://hacktoberfest.digitalocean.com/sign_up/register"><button class="button-white">Find a project to work on</button></a>
+            </div>
+        </div>
+    </section>
+
+
+		
+		
+</script>
+
+
+</body>
+
+</html>
